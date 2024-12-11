@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
-import UserData from "./../_components/UserData";
-
+import UserData from "../_components/UserData";
 
 const Client = () => {
   return (
     <div className='className="w-[600px] mt-5 "'>
-      <UserData/>
+      <UserData />
     </div>
   );
 };

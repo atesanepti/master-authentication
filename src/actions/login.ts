@@ -59,11 +59,15 @@ export const login = async (values: z.infer<typeof loginSchema>) => {
       email,
       password,
     });
-  } catch (error: unknown) {
-    if (error.name !== "AccessDenied") {
-      const credentialsError = error as CredentialsSignin;
-      return { error: credentialsError?.cause?.err?.message };
+    
+  } catch (error ) {
+    if(error instanceof Error){
+      if (error.name !== "AccessDenied") {
+        const credentialsError = error as CredentialsSignin;
+        return { error: credentialsError?.cause?.err?.message };
+      }
     }
+    
   }
 
   if (!user?.emailVerified) {

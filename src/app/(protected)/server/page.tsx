@@ -1,6 +1,5 @@
 import React from "react";
-import UserData from "./../_components/UserData";
-
+import UserData from "../_components/UserData";
 
 const Server = () => {
   return (

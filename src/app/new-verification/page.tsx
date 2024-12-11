@@ -1,7 +1,5 @@
 "use client";
-import React, { useCallback, useEffect, useState, useTransition } from "react";
-import { cn } from "@/lib/utils";
-import { Poppins } from "next/font/google";
+import React, {  useEffect, useState, useTransition } from "react";
 import CardWapper from "./../../components/auth/CardWapper";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
@@ -10,10 +8,6 @@ import { verifyToken } from "@/actions/token";
 import FormErrorMessage from "./../../components/FormErrorMessage";
 import FormSuccessMessage from "./../../components/FormSuccessMessage";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
 
 const Verification = () => {
   const [success, setSuccess] = useState("");

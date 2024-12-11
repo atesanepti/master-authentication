@@ -25,7 +25,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
   };
 
   try {
-    const info = await transporter.sendMail(options);
+   await transporter.sendMail(options);
 
     return true;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -48,7 +48,7 @@ export const sendForgetEmail = async (email: string, token: string) => {
   };
 
   try {
-    const info = await transporter.sendMail(options);
+    await transporter.sendMail(options);
 
     return true;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -69,7 +69,7 @@ export const sendTowFACode = async (email: string, code: string) => {
   };
 
   try {
-    const info = await transporter.sendMail(options);
+    await transporter.sendMail(options);
 
     return true;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

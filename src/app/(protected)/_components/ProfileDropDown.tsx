@@ -12,7 +12,7 @@ import {
 import { LogOut } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
-import LogoutButton from "./../../../../components/auth/LogoutButton";
+import LogoutButton from "../../../components/auth/LogoutButton";
 
 const ProfileDropDown = () => {
   const user = useCurrentUser();

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { loginSchema } from "@/schema";
 import {
@@ -31,7 +31,8 @@ import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 
 const LoginForm = () => {
   const params = useSearchParams();
-  const redirectUrl = params.get("redirect");
+  const redirectUrl = params.get("redirect") || "";
+  
   const urlError =
     params.get("error") == "OAuthAccountNotLinked"
       ? "Email already used with different provider!"

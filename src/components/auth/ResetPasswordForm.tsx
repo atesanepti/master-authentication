@@ -20,7 +20,8 @@ import { useSearchParams } from "next/navigation";
 import { resetPassword } from "@/actions/resetPassword";
 
 const ResetPasswordForm = () => {
-  const token = useSearchParams().get("token") || "";
+  const params = useSearchParams()
+  const token = params.get("token") || "";
 
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState<string>("");

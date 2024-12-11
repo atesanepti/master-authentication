@@ -142,7 +142,6 @@ const Setting = () => {
                           disabled={isPending || isOAuthProvider}
                           type="password"
                           placeholder="******"
-                          disabled={isOAuthProvider}
                           {...field}
                         />
                       </FormControl>
